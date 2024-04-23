@@ -1,7 +1,7 @@
 @font-face {
-	font-family: "Roboto"; 
-	src: local('Roboto'),
-		url(../src/ttf/Roboto-Regular.ttf); 
+font-family: "Roboto"; 
+src: local('Roboto'),
+url(../src/ttf/Roboto-Regular.ttf); 
 }
 body {
 margin: 0;
