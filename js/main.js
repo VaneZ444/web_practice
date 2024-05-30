@@ -82,7 +82,7 @@ const disableImages = () => {
     imagesArr[i].style.display = "none";
     }
     for(let i = 0 ; i < all_elements.length ; i++){
-        if ((all_elements[i].classList.contains('nav-btn'))&&(all_elements[i].classList.contains('ef-button'))){
+        if ((all_elements[i].classList.contains('nav-btn'))||(all_elements[i].classList.contains('ef-button'))){
             continue;
         } else {
         all_elements[i].style.setProperty("background-image","unset","important");
