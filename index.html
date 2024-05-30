@@ -10,18 +10,38 @@
 
 <body>
     <!-- Вступительный экран-->
-    <div class="intro-screen">
+    <div id="main" class="intro-screen">
+        <div class="settings-bar-wrapper" style="display: none;">
+            <div class="settings-bar">
+                <span class="font-settings">
+                    <span>Шрифт:</span>
+                    <a href="#" class="fontbtn-def">A</a>
+                    <a href="#" class="fontbtn-huge" style="font-size: var(--font-size-5);">A</a>
+                </span>
+                <span class="theme-settings">
+                    <span>Тема:</span>
+                    <a href="#" class="theme-btn">Темная</a>
+                </span>
+                <span class="image-settings">
+                    <span>Изображения:</span>
+                    <a href="#" class="img-btn">Вкл</a>
+                </span>
+            </div>
+        </div>
+        <!--Верхняя менюшка без кнопок "настройки" и "практики" сужалась куда проще-->
         <div class="nav_menu_wrapper">
             <div class="nav-item nav-logo"><img src="src\img\svg\logo.svg" alt="альтернативный текст"></div>
             <div class="nav-menu">
-                <div class="nav-item"><a href="#" class="nav-item-link">Главная</a></div>
-                <div class="nav-item"><a href="#" class="nav-item-link">Курсы</a></div>
-                <div class="nav-item"><a href="#" class="nav-item-link">Расписание</a></div>
-                <div class="nav-item"><a href="#" class="nav-item-link">Преподаватели</a></div>
-                <div class="nav-item"><a href="#" class="nav-item-link">Рассылки</a></div>
-                <div class="nav-item"><a href="#" class="nav-item-link">Контакты</a></div>
+                <div class="nav-item"><a href="#main" class="nav-item-link">Главная</a></div>
+                <div class="nav-item"><a href="#courses" class="nav-item-link">Курсы</a></div>
+                <div class="nav-item"><a href="#schedule" class="nav-item-link">Расписание</a></div>
+                <div class="nav-item"><a href="#teachers" class="nav-item-link">Преподаватели</a></div>
+                <div class="nav-item"><a href="#newsletter" class="nav-item-link">Рассылки</a></div>
+                <div class="nav-item"><a href="#newsletter" class="nav-item-link">Контакты</a></div>
+                <div class="nav-item"><a href="#" onclick="hideShowSettings()" style="text-decoration: underline" class="nav-item-link settings-button">Настройки</a></div>
+                <div class="nav-item"><a href="https://disk.yandex.ru/d/tJSgwuRulFPiwA"style="text-decoration: underline" class="nav-item-link">Практики</a></div>
             </div>
-            <div class="nav-item nav-btn"><a href="#" class="nav-item-btn">Зайти в кабинет</a></div>
+            <div class="nav-item nav-btn"><a href="#" class="nav-item-btn btn-grad">Зайти в кабинет</a></div>
         </div>
         <div class="intro-content">
             <h1 class="headline">Первый курс <br> 
@@ -35,7 +55,7 @@
         </div>
         <div class="main_screen_money">
             <div class="money-wrapper-left">
-                <div class="nav-item nav-btn buy-btn"><a href="#" class="nav-item-btn">Заказать курс</a></div>
+                <div class="nav-item nav-btn buy-btn"><a href="#" class="nav-item-btn btn-grad">Заказать курс</a></div>
                 <div class="people-info">
                     <div class="info-line"><div class="people-text">Учеников всего: </div> <div class="people-num">200</div></div>
                     <div class="info-line"><div class="people-text">Успешно закончили курс: </div> <div class="people-num">190</div></div>
@@ -57,7 +77,7 @@
         </div>
     </div>
     <!--Информация-->
-    <div class="about">
+    <div id="courses" class="about">
         <div class="about-wrapper">
                 <div class="about-img">
                     <img src="./src/img/about-img.png" alt="" class="about-img-pic">
@@ -172,13 +192,13 @@
         <div class="partners-wrapper">
             <div class="start-title left">
                 <div class="start-title-img">
-                    <img src="./src/img/icon-loading.png">
+                    <img class="d" src="./src/img/icon-loading.png">
                 </div>
                 <div div class="partners-title-text">Партнеры - топовые бренды</div>
             </div>
-            <div class="flex-row-main">
+            <div class="d flex-row-main">
                 <div class="p-flex-row-upper">
-                    <div class="p-flex-block-upper-last"><img src="./src/img/msi.png" alt="" class="msi-pic"></div>
+                    <div class="p-flex-block-upper-last"><img class="msi-pic"></div>
                     <div class="p-flex-block-upper"><img src="./src/img/msi.png" alt="" class="msi-pic"></div>
                     <div class="p-flex-block-upper"><img src="./src/img/msi.png" alt="" class="msi-pic"></div>
                     <div class="p-flex-block-upper-last"><img src="./src/img/msi.png" alt="" class="msi-pic"></div>
@@ -193,10 +213,10 @@
         </div>
     </div>
     <!--Программа-->
-    <div class="program">
+    <div id="schedule" class="program">
         <div class="program-wrapper">
                 <div class="program-title">
-                    <div class="start-title-img">
+                    <div class="d start-title-img">
                         <img src="./src/img/icon-loading.png" alt="">
                     </div>
                     <div class="start-title-text program-title-text">Программа обучения</div>
@@ -248,11 +268,11 @@
         </div>
     </div>
     <!--Команда-->
-    <div class="team">
+    <div id="teachers" class="team">
         <div class="team-wrapper">
             <div class="wrapper">
                 <div class="team-title">
-                    <div class="start-title-img">
+                    <div class="d start-title-img">
                         <img src="./src/img/icon-loading.png" alt="">
                     </div>
                     <div div class="team-title-text">Ваши преподаватели</div>
@@ -289,7 +309,7 @@
     <!--почта-->
     <div class="email">
         <div class="email-wrapper">
-            <div class="start-title email-title">
+            <div id="newsletter"class="start-title email-title">
                 <div div class="start-title-text ett">Статьи каждую неделю</div>
                 <div class="email-subtitle">Больше 90% учеников прошли полный курс и смогли собрать свой
                     первый компьютер</div>
@@ -299,7 +319,7 @@
                     <input type="email" class="ef-input" placeholder="E-mail">
                     <input type="submit" class="ef-button" value="Подписаться">
                 </form>
-                <div class="email-icons-wrapper">
+                <div class="d email-icons-wrapper">
                     <div class="email-icon">
                         <img src="./src/img/svg/vk.svg" alt="" class="email-icon__pic">
                     </div>
@@ -316,5 +336,6 @@
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
